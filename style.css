@@ -1,5 +1,92 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  /* color: currentColor; */
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Inherit fonts for inputs and buttons */
+/* input,
+button,
+textarea,
+select {
+  font: inherit;
+} */
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
 
 * {
   margin: 0;
@@ -8,78 +95,83 @@
 
 body {
   background-color: hsl(30, 38%, 92%);
+  display: grid;
+  place-content: center;
+  font-family: "Montserrat", sans-serif;
 }
 
-.main {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  height: 450px;
-  width: 600px;
+main section {
   background-color: hsl(0, 0%, 100%);
+  color: hsl(228, 12%, 48%);
+  max-width: 37.5rem;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  margin: 1rem;
+  border-radius: 0.5rem;
 }
 
-.image {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+section .imgPerfume {
+  max-width: 18.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
-.text {
-  padding: 32px;
+section .content {
+  padding: 2rem;
 }
 
-.product {
+.content .product {
+  font-size: 0.6875em;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-bottom: 25px;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.5rem;
 }
 
-.name {
-  line-height: 30px;
-  margin-bottom: 25px;
+.content .name {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+  line-height: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
-.description {
-  font-size: 14px;
+.content .description {
+  font-size: 0.875em;
   font-weight: 500;
-  line-height: 25px;
-  margin-bottom: 25px;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.prices {
+.content .prices {
   display: flex;
-  justify-content: left;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
-.newprice {
+.prices .newprice {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+}
+
+.prices .previousprice {
   text-decoration: line-through;
+  font-size: 0.8em;
   font-weight: 500;
 }
 
-button {
+section button {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 0.625rem;
   background-color: hsl(158, 36%, 37%);
   color: hsl(0, 0%, 100%);
   width: 100%;
-  margin-top: 25px;
-  padding: 15px 0;
+  padding: 1rem 0;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3rem;
+  font-family: inherit;
   font-weight: 700;
 }
 
@@ -88,31 +180,11 @@ button:hover {
   background-color: hsl(158, 38%, 19%);
 }
 
-.Montserrat {
-  font-family: "Montserrat", sans-serif;
-}
-
-.Fraunces {
-  font-family: "Fraunces", serif;
-}
-
-.grayish {
-  color: hsl(228, 12%, 48%);
-}
-
-.darkblue {
-  color: hsl(212, 21%, 14%);
-}
-
-.darkcyan {
-  color: hsl(158, 36%, 37%);
-}
-
-.attribution {
-  font-size: 11px;
+footer {
+  font-size: 0.8em;
   text-align: center;
 }
 
-.attribution a {
+footer a {
   color: hsl(228, 45%, 44%);
 }
