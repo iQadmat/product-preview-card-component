@@ -2,61 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
-
     <title>Frontend Mentor | Product preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="main">
-      <div class="content">
+    <main>
+      <section>
         <img
           src="images/image-product-desktop.jpg"
           alt="An image of a Perfume."
-          class="image"
+          class="imgPerfume"
         />
-        <div class="text">
-          <h6 class="Montserrat grayish product">Perfume</h6>
-          <h1 class="Fraunces darkblue name">
-            Gabrielle Essence Eau De Parfum
-          </h1>
-
-          <p class="Montserrat grayish description">
+        <div class="content">
+          <p class="product">Perfume</p>
+          <h1 class="name">Gabrielle Essence Eau De Parfum</h1>
+          <p class="description">
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
-
           <div class="prices">
-            <h1 class="Fraunces darkcyan previousprice">$149.99</h1>
-            <h5 class="Montserrat grayish newprice">$169.99</h5>
+            <h2 class="newprice">$149.99</h2>
+            <p class="previousprice">$169.99</p>
           </div>
-
-          <button class="Montserrat">
+          <button>
             <img
               src="images/icon-cart.svg"
               alt="An image of a shopping cart."
             />Add to Cart
           </button>
         </div>
-      </div>
-
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io/home" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://www.frontendmentor.io/profile/iQadmat" target="_blank"
-          >iQadmat</a
-        >.
-      </div>
+      </section>
     </main>
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io/home" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/iQadmat" target="_blank"
+        >iQadmat</a
+      >.
+    </footer>
   </body>
 </html>
