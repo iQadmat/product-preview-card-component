@@ -18,7 +18,7 @@
 ### Links
 
 - Solution URL: [Solution Page](https://www.frontendmentor.io/solutions/product-preview-card-component-LumWd_XgiU)
-- Live Site URL: [Deployment](https://iqadmat.github.io/product-preview-card-component/)
+- Live Site URL: [Deployment](https://iqadmat-product-preview-card.netlify.app/)
 
 ## My process
 
