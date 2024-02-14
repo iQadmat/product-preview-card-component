@@ -120,7 +120,7 @@ section .content {
 }
 
 .content .product {
-  font-size: 0.6875em;
+  font-size: 0.75em;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.3em;
@@ -187,4 +187,19 @@ footer {
 
 footer a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1000px) {
+  main section {
+    max-width: 22.5rem;
+    flex-direction: column;
+  }
+
+  section .imgPerfume {
+    content: url(images/image-product-mobile.jpg);
+    max-width: 22.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
 }
